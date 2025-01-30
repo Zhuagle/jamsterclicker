@@ -11,7 +11,7 @@ not yet
 
 # Where are the animations?
 
-only one aniamtion so far, in future updates there will be more
+only one animation so far, in future updates there will be more
 
 # This game sucks
 
