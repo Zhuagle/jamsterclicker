@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jamster Clicker</title>
   <style>
-    body{
+    body {
       text-align: center;
       background-color: blanchedalmond;
     }
   </style>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jamster clicker</title>
 </head>
+
 <body>
-<h1>Jamster Clicker</h1>
-  <div id="number">0</div> 
-  <img style="width: 100px; height: 100px; border-radius: 10%;" src="https://cdn.i-scmp.com/sites/default/files/d8/images/methode/2021/08/05/7232924c-f50d-11eb-97f9-89051db5b6c1_image_hires_185341.jpg"
-  <button class="jamster_button" onclick="increaseNumber()"></button> 
-<h1>Click me! The Jamster!</h1>
+  <h1>Jamster Clicker</h1>
+  <div id="number">0</div>
+  <img id="jamster" style="width: 100px; height: 100px; border-radius: 10%;"
+    src="https://cdn.i-scmp.com/sites/default/files/d8/images/methode/2021/08/05/7232924c-f50d-11eb-97f9-89051db5b6c1_image_hires_185341.jpg"
+    onmousedown="big()" onmouseup="mouseUp()" onmouseleave="mouseUp()">
+  <h1>Click me! The Jamster!</h1>
 
   <script>
-    let count = 0; 
+    let count = 0;
 
     function increaseNumber() {
       count++;
-      document.getElementById("number").innerText = count; 
+      document.getElementById("number").innerText = count;
+    }
+
+    function big() {
+      let img = document.getElementById("jamster");
+      img.style.width = "120px";
+      img.style.height = "120px";
+      increaseNumber()
+    }
+
+    function mouseUp() {
+      let img = document.getElementById("jamster");
+      img.style.width = "100px";
+      img.style.height = "100px";
     }
   </script>
 </body>
+
 </html>
