@@ -28,7 +28,8 @@ async function getLatestUpdate() {
                 throw new Error("Could not fetch resource")
             }
             const downloadData = await downloadCheck.json()
-            console.log(downloadData.assets)
+            const downloadLink = downloadData.assets[0]["browser_download_url"]
+            console.log(downloadLink)
         }
     } catch(error) {
         console.error(error)
