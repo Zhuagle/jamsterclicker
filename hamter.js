@@ -1,18 +1,14 @@
 // code for reference for jamster.html
 
 // for now only checks for an update and console.log() to console
-const requestOptions = {
-    method: "GET",
-    redirect: "follow"
-};
 
 // this is the file's current release tag
 const currentReleaseTag = "1.0.0"
 
-getLatestTag()
+getLatestUpdate()
 
 // checks to see if the file is up to date
-async function getLatestTag() {
+async function getLatestUpdate() {
     try {
         const response = await fetch("https://api.github.com/repos/Zhuagle/jamsterclicker/tags")
         if (!response.ok) {
@@ -23,9 +19,16 @@ async function getLatestTag() {
         if (currentReleaseTag === releaseTag) {
             // change this to show something on screen
             console.log("matches nothing to see")
+            return
         } else {
             // change this to show something on screen
             console.log("got to update")
+            const downloadCheck = await fetch("https://api.github.com/repos/Zhuagle/jamsterclicker/releases/latest")
+            if (!downloadCheck) {
+                throw new Error("Could not fetch resource")
+            }
+            const downloadData = await downloadCheck.json()
+            console.log(downloadData.assets)
         }
     } catch(error) {
         console.error(error)
