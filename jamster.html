@@ -58,7 +58,11 @@ async function getLatestTag() {
     let count = 0;
 
     function increaseNumber() {
-      count++;
+      if (count >= 100) {
+        count += 2;  
+      } else {
+        count++;  
+      }
       document.getElementById("number").innerText = count;
     }
 
