@@ -7,11 +7,11 @@ download, open, and spam the jamster
 
 # IS THERE UPGRADES
 
-no
+not yet
 
 # WHERE THE ANIMATIONS AT?
 
-jamster needs to animations
+only one aniamtion so far, in future updates there will be more
 
 # THIS GAME SUCKS
 
