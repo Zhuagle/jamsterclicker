@@ -1,18 +1,18 @@
 # jamsterclicker
 A pointless clicker where you spam click a picture of a hamster. Nothing special happens here.
 
-# HOW DO I PLAY??
+# How to play
 
-download, open, and spam the jamster
+download from releases, open, and spam the jamster
 
-# IS THERE UPGRADES
+# Is there upgrades?
 
 not yet
 
-# WHERE THE ANIMATIONS AT?
+# Where are the animations?
 
 only one aniamtion so far, in future updates there will be more
 
-# THIS GAME SUCKS
+# This game sucks
 
 click the jamster more
