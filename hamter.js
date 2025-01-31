@@ -7,6 +7,16 @@ const currentReleaseTag = "1.0.0"
 
 getLatestUpdate()
 
+// yay stack overflow https://stackoverflow.com/questions/54626186/how-to-download-file-with-javascript
+
+function downloadURI(uri, name) 
+{
+    var link = document.createElement("a");
+    link.download = name;
+    link.href = uri;
+    link.click();
+}
+
 // checks to see if the file is up to date
 async function getLatestUpdate() {
     try {
@@ -29,7 +39,9 @@ async function getLatestUpdate() {
             }
             const downloadData = await downloadCheck.json()
             const downloadLink = downloadData.assets[0]["browser_download_url"]
-            console.log(downloadLink)
+            var downloadName = downloadLink.split("/")
+            downloadName = downloadName[8]
+            downloadURI(downloadLink, downloadName)
         }
     } catch(error) {
         console.error(error)
