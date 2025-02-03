@@ -7,7 +7,7 @@ const requestOptions = {
 };
 
 // this is the file's current release tag
-const currentReleaseTag = "1.0.0"
+const currentReleaseTag = "1.1.0"
 
 getLatestTag()
 
